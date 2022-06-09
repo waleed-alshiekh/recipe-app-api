@@ -11,7 +11,7 @@ services:
       - POSTGRES_DPASSWORD=test1234
       - POSTGRES_HOST_AUTH_METHOD=trust
     networks:
-      - djangonetwork
+      - network
 
   app:
     build:
@@ -34,7 +34,7 @@ services:
     links:
       - db:db
     networks:
-      - djangonetwork
+      - network
 
 networks:
   djangonetwork:
